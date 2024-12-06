@@ -1,0 +1,8 @@
+pandas
+numpy
+seaborn
+matplotlib
+plotly==5.24.1
+plotly_express
+streamlit
+nbformat
