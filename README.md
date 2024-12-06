@@ -1,51 +1,50 @@
-# APLICACION WEB PARA VISUALIZACION DE DATA DE VEHICULOS DE U.S.
+# WEB APPLICATION FOR VISUALIZING U.S. VEHICLE DATA
 
-## VISTA GENERAL DEL PROYECTO
+## PROJECT OVERVIEW
 
-Este proyecto se basa en crear y gestionar entornos virtuales de Python, desarrollar una aplicación web y desplegarla en un servicio en la nube de acceso público RENDER.
+This project is based on creating and managing Python virtual environments, developing a web application, and deploying it to a publicly accessible cloud service RENDER.
 
-El proyecto utilizó un conjunto de datos de anuncios de venta de coches "vehicles_us.csv" aunque no se centró principalmente en el conjunto de datos o en el análisis del mismo.
+The project used a dataset of car sales ads "vehicles_us.csv" although it was not primarily focused on the dataset or the analysis of it.
 
+## STEPS:
 
-## PASOS:
+### STEP 1: PROJECT REQUIREMENTS
 
-### PASO 1: REQUISITOS DEL PROYECTO
+- Create a GitHub account and start a new repository with the README.md and .gitignore files.
+- Install the necessary packages, including pandas, streamlit, and plotly-express.
+- Create a Render.com account and link it to the project repository on GitHub.
+- Install and configure VS Code, setting the Python interpreter to match the virtual environment.
 
-- Crea una cuenta en GitHub e inicié un nuevo repositorio con los archivos README.md y .gitignore.
-- Instala los paquetes necesarios, incluyendo pandas, streamlit, y plotly-express.
-- Crea una cuenta en Render.com y la vinculelo con el repositorio del proyecto en GitHub.
-- Instalale y configure VS Code, estableciendo el intérprete de Python para que coincida con el entorno virtual.
+### STEP 2: DATA ACQUISITION
 
-### PASO 2: ADQUISICION DE DATOS
+- Download the "vehicles_us.csv" database and place it in your project directory.
 
-- Descarga la base de datos "vehicles_us.csv" y ubique en el directorio de su proyecto.
+### STEP 3: DATA ANALYSIS AND VISUALIZATION
 
-### PASO 3: ANALISIS Y VISUALIZACION DE LA DATA
+- Create a Jupyter Noteboo workbook called EDA.ipynb and perform an observation of the data
+- Create histograms and scatter plots using plotly-express library.
+- The plots made in Jupyter were the first prototype of the web project.
 
-- Crea un libro en Jupyter Noteboo llamado EDA.ipynb y realice una observacion de la data
-- Crea histogramas y diagramas de dispercion usando plotly-express library.
-- Los diagramas realizados en Jupyter fueron el primer prototipo del proyecto web.
+### STEP 4: WEB APPLICATION DEVELOPMENT
 
-### PASO 4: DESARROLLO DE LA APLICACION WEB
+- Create the python file app.py in the project directory.
+- Import the necessary libraries streamlit, pandas, and plotly_express.
+- Load the data from the file "vehicles_us.csv" using Pandas and create the DataFrame "car_data".
+- Incorporate Streamlit elements into the app such as Title, buttons, histograms, scatterplots and messages.
+- Update the README file with the project description, instructions and each change that is made.
 
-- Crear el archivo python app.py en el directorio del proyecto.
-- Importa las librerias necesarias streamlit, pandas, y plotly_express.
-- Carga la data de l archivo "vehicles_us.csv" usando Pandas y crea la DataFrame "car_data".
-- Incorpora elementos de Streamlit en la app como Titulo, botones, histogramas, diagramas de dispersion y mensajes.
-- Actualiza el archivo README con la descripcion del proyecto, instrucciones y cada cambio que se realice.
+### STEP 5: DEPLOY IN RENDER
 
-### PASO 5: DESPLIEGUE EN RENDER
+- Add the streamlit configuration file to the GitHub repository called "config.toml"
+- Create a web service linked to the GitHub repository in Render.
+- Configure the Render web service to install the necessary packages using the file "requirements.txt" and run the app.py file, all this with the command:
+- BUILD COMMAND: pip install --upgrade pip && pip install -r requirements.txt
+- START COMMAND: streamlit run app.py
+- Deploy the final version of the application in Render.
+- Checked the accessibility of the application at the link: https://tripleten-project-spring-6.onrender.com/
 
-- Añade el archivo de configuración de streamlit al repositorio de GitHub llamado "config.toml"
-- Crea un servicio web vinculado al repositorio GitHub en Render.
-- Configura el servicio web Render para instalar los paquetes necesarios usando el archivo "requirements.txt" y ejecuta el archivo app.py, todo esto con el comando: 
-    - BULILD COMMAND: pip install --upgrade pip && pip install -r requirements.txt
-    - START COMMAND: streamlit run app.py
-- Despliega la versión final de la aplicación en Render.
-- Verificada la accesibilidad de la aplicación en el link: https://tripleten-project-spring-6.onrender.com/
+## CONCLUSION
 
-## CONCLUCION
-
-Esta aplicación Streamlit proporciona una visualización interactiva del conjunto de datos "vehicle_us.csv". La aplicación se desarrolló como parte de la práctica de tareas de Ciencia de Datos, a saber, la creación de entornos virtuales Python, el desarrollo de una aplicación web y su despliegue en un servicio en la nube. La aplicación está activa y se puede acceder a ella. https://tripleten-project-spring-6.onrender.com/
+This Streamlit application provides an interactive visualization of the "vehicle_us.csv" dataset. The application was developed as part of the Data Science practice assignments, namely the creation of Python virtual environments, the development of a web application and its deployment to a cloud service. The application is active and can be accessed at https://tripleten-project-spring-6.onrender.com/
 
 PROYECTO DE: GIORGIO RAMIREZ
